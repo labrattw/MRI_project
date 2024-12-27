@@ -181,32 +181,24 @@ torchvision
 
 ---
 
-## Troubleshooting
+## 7. Troubleshooting
 - If Docker does not detect your GPU:
   - Ensure the NVIDIA driver is correctly installed.
   - Reinstall the NVIDIA Container Toolkit.
   - Verify that your GPU supports CUDA.
-- Refer to the official [Docker Documentation](https://docs.docker.com/) or [NVIDIA CUDA Documentation](https://developer.nvidia.com/cuda-toolkit-archive) for additional help.
+- Refer to the official [Docker Documentation](https://docs.docker.com/) or [NVIDIA CUDA Documentation](https://developer.nvidia.com/cuda-toolkit-archive) for additional help. This guide provides a step-by-step setup for CUDA and Docker on macOS and Windows. For advanced configurations or further assistance, refer to the respective official documentation.
 
 ---
-
-This guide provides a step-by-step setup for CUDA and Docker on macOS and Windows. For advanced configurations or further assistance, refer to the respective official documentation.
-
-Dataset: TumorSegmentation
-https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation
-===================================================================
+## 8. Dataset: Tumor Segmentation
+- source: https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation
+- The dataset includes 2146 images.
+- Tumors are annotated in COCO Segmentation format.
+- The following pre-processing was applied to each image:
+   - Auto-orientation of pixel data (with EXIF-orientation stripping)
+   - Resize to 640x640 (Stretch)
+   - No image augmentation techniques were applied.
 
 This dataset was exported via roboflow.com on August 19, 2023
-
-The dataset includes 2146 images.
-Tumors are annotated in COCO Segmentation format.
-====================================================================
-
-The following pre-processing was applied to each image:
-* Auto-orientation of pixel data (with EXIF-orientation stripping)
-* Resize to 640x640 (Stretch)
-* No image augmentation techniques were applied.
-====================================================================
 
 Provided by Roboflow
 License: CC BY 4.0
